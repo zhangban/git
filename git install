@@ -1,0 +1,27 @@
+https://www.shiyanlou.com/courses/616/labs/2058/document/
+二、安装 Git
+
+在本次实验里我们的虚拟机既做本地端，又做远程端，所以安装 Git 只需要一次。学完了本实验后，你可以尝试在自己的电脑里搭建 Git 服务器，实现局域网内的代码托管。　
+
+$ sudo apt-get update
+$ sudo apt-get install git  #安装Git
+
+2.1 添加 git 用户
+
+为了方便管理和操作，我们添加一个用户 git ,并给他设置工作目录：
+
+$ sudo useradd git
+$ sudo passwd  git  # 设置密码,为了方便操作，密码较为简单
+$ sudo mkdir /home/git   # 设置 git 用户的工作目录
+$ sudo chown -R  git　/home/git  #将工作目录的权限给git用户
+
+```checker
+
+    name: check user script: |
+    !/bin/bash
+    getent passwd git error: 没有添加 git 用户
+    name: check dir script: |
+    !/bin/bash
+    ls /home/git error: 没有 /home/git 目录
+    name: check priv script: |
+    !/bin/bas
