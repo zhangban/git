@@ -25,3 +25,4 @@ $ sudo chown -R  git　/home/git  #将工作目录的权限给git用户
     ls /home/git error: 没有 /home/git 目录
     name: check priv script: |
     !/bin/bas
+    i love love you 
